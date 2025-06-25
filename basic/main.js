@@ -16,7 +16,8 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.z = 5;
 // 3.create and add a cube object
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshLambertMaterial({
+const material = new THREE.MeshLambertMaterial(
+{
   color: "#468585",
   emissive: "#468585",
 });
