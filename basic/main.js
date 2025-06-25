@@ -4,11 +4,11 @@ import * as THREE from "three";
 // 1.create the scene
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#FFFFFF");
+scene.background = new THREE.Color("#000000");
 
 // 2.add the camera
 const camera = new THREE.PerspectiveCamera(
-  75,
+  75, // wide the camera's view is. common values 45 to 90
   window.innerWidth / window.innerHeight,
   0.1,
   1000
@@ -41,8 +41,8 @@ document.body.appendChild(renderer.domElement);
 // }
 function animate() {
   requestAnimationFrame(animate); //Request for animation
-  cube.rotation.x += 0.05;
-  cube.rotation.y += 0.05;
+  cube.rotation.x += 0.02;
+  cube.rotation.y += 0.02;
 renderer.render(scene, camera);
 }
 animate();
