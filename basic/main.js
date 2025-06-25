@@ -19,7 +19,7 @@ const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshLambertMaterial(
 {
   color: "#468585",
-  emissive: "#468585",
+  emissive: "#468585",    //The emissive is black by default if it  is black we can't make shadow effect
 });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
@@ -41,8 +41,8 @@ document.body.appendChild(renderer.domElement);
 // }
 function animate() {
   requestAnimationFrame(animate); //Request for animation
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
+  cube.rotation.x += 0.05;
+  cube.rotation.y += 0.05;
 renderer.render(scene, camera);
 }
 animate();
