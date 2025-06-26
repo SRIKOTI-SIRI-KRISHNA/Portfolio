@@ -1,24 +1,18 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import * as THREE from 'three'   //This line means * (everything) import as three js
+const canvas=document.getElementById("canvas")
+// 1.create a scene
+const scene=new THREE.Scene();
+// create a camera
+const camera=new THREE.PerspectiveCamera(75,window.innerWidth,window.innerHeight, 0.1,1000)  //near=0.1 and far=1000
+// camera.position.set(0,0,canvas.width,canvas.height)
+camera.position.z=5
+// add object in space
+const geometry =new THREE.DodecahedronGeometry()
+const material=new THREE.MeshBasicMaterial({color:"#468585"})
+const dodecahedron=new THREE.Mesh(geometry, material)
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+const boxgeometry=new THREE.BoxGeometry(2,0.1,1) //2 for width 0.1 for height 1 for depth
+const boxMaterial=new THREE.MeshBasicMaterial({color:"#B4B4B4"})
+const box=new THREE.Box(boxgeometry,boxMaterial)
+box.position.y=-1.5
+scene.add(dodecahedron)
