@@ -1,0 +1,88 @@
+* {
+  
+  color: white;
+  margin-left: 25px;
+}
+body {
+  /* 1. Set your background image */
+  background-image: url('background.jpg');
+
+  /* 2. This is the key line to stop it from scrolling */
+  background-attachment: fixed;
+
+  /* 3. (Optional but recommended) These ensure the image looks good */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents it from tiling */
+  background-size: cover;     /* Makes it fill the entire screen */
+}
+p {
+  font-size: 30px;
+}
+.intro {
+  margin-bottom: 50px;
+  margin-left: None;
+  font-style: italic;
+  font-size: 35px;
+}
+.ov {
+  margin-right: 600px;
+}
+.over {
+  font-size: 25px;
+  font-style: italic;
+}
+.menu {
+  /* background-color:blue; */
+  font-size: 10px;
+  font-style: initial;
+  margin-bottom: 40px;
+}
+.left {
+  margin-right: 750px;
+  margin-bottom: 150px;
+}
+.right {
+  margin-left: 700px;
+  margin-right: 25px;
+  margin-bottom: 100px;
+}
+/* .borderleft{
+    border-radius: 25%;
+    display: flex;
+} */
+.borderright {
+  margin-left: 700px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+}
+.tech {
+  margin-bottom: 10px;
+}
+.heading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+}
+.name-input {
+  font-size: 20px;
+  border-radius: 25px;
+  margin-left: 50px;
+  padding: 10px;
+  width: 400px;
+  height: 50px;
+}
+form {
+  cursor: auto;
+}
+button {
+  background-color: green;
+  border-radius: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+a {
+  color: blue;
+}
+.he{
+  display: flex;
+  /* flex-wrap: wrap; */
+}
